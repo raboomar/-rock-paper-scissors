@@ -6,6 +6,7 @@ const computerImg = document.querySelector(".computerSeletion");
 const userScore = document.getElementById("user-score");
 const computerSore = document.getElementById("computer-score");
 const battleResults = document.getElementById("battle-results");
+const reset = document.getElementById("reset");
 const btn = [rock, paper, scissors];
 
 btn.forEach((element) => {
@@ -14,6 +15,9 @@ btn.forEach((element) => {
     userImg.src = `./images/${userWeapon}.jpeg`;
     computerSelection(userWeapon);
   });
+});
+reset.addEventListener("click", () => {
+  restartData();
 });
 
 const computerSelection = (userWeapon) => {
@@ -56,4 +60,12 @@ const results = (user, computer, tie, userWon) => {
   } else {
     battleResults.innerHTML = ` You Lost! \n  ${computer} beats ${user} `;
   }
+};
+
+const restartData = () => {
+  userScore.innerHTML = "0";
+  computerSore.innerHTML = "0";
+  userImg.src = "./images/questionMark.jpeg";
+  computerImg.src = "./images/questionMark.jpeg";
+  battleResults.style.visibility = "hidden";
 };
