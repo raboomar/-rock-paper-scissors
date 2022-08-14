@@ -11,20 +11,35 @@
     <div class="grid-container">
       <div class="item1">
         <h2>Rock paper scissors</h2>
+        <h3>Best of three</h3>
       </div>
 
       <div class="userSection">
-        <h6>You</h6>
+        <h6 class="userHeader">You</h6>
         <img
           src="./images/rock-paper-scissors-icon-16.jpeg"
           class="userSelection"
         />
       </div>
       <div class="computerSection">
-        <h6>Computer</h6>
+        <div>
+          <h6 class="computerHeader">Computer</h6>
+        </div>
         <img src="./images/sissoers.jpeg" class="computerSeletion" />
       </div>
-      <div class="item5">Footer</div>
+      <div class="userScore">
+        <h4>Your Score</h4>
+        <h4>0</h4>
+      </div>
+      <div class="computerScore">
+        <h4>Computer Score</h4>
+        <h4>0</h4>
+      </div>
+      <div class="item6">
+        <button class="btn" id="rock">Rock</button>
+        <button class="btn" id="paper">Paper</button>
+        <button class="btn" id="scissors">Scissors</button>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>

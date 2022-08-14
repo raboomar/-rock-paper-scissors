@@ -1,3 +1,18 @@
+h2{
+    margin: 0;
+    color: azure;
+}
+h3{
+    margin: 0;
+    color: azure;
+}
+h4{
+    margin: 0;
+    color: azure;
+}
+h6{
+    color: azure;
+}
 .item1 { 
 grid-area: header;
 height: 150px;
@@ -5,16 +20,26 @@ height: 150px;
 
 .userSection { 
 grid-area: main;
-height: 400px;
-width: 400px; 
+/* height: 300px;
+width: 300px;  */
 }
 .computerSection { 
 grid-area: right;
-height: 400px;
-width: 400px; 
+/* height: 350px;
+width: 400px;  */
+/* display: flex; */
+  /* justify-content: center;
+  align-items: center;
+  text-align: center; */
  }
-.item5 { 
-grid-area: footer; 
+.userScore { 
+grid-area: userScore; 
+}
+.item6 { 
+grid-area: buttons; 
+}
+.computerScore{
+ grid-area: ComputerScore;
 }
 
 .grid-container {
@@ -22,7 +47,8 @@ grid-area: footer;
   grid-template-areas:
     'header header header header header header'
     ' main main main right right right'
-    'footer footer footer footer footer footer';
+    'userScore userScore userScore ComputerScore ComputerScore ComputerScore'
+    'buttons buttons buttons buttons buttons buttons';
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
@@ -32,17 +58,36 @@ grid-area: footer;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
 
 .userSelection{
-height: 100%;
-width: 100%;
+    
+height: 350px;
+width: 350px;
+}
+.userHeader{
+    margin: 0;
+    padding-bottom: 10px;
 }
 .computerSeletion{
-  height: 100%;
-  width: 100%;
+
+    height: 350px;
+    width: 350px;
+}
+.computerHeader{
+    margin: 0;
+    padding-bottom: 10px;
+    
+}
+.btn{
+    border: none;
+    background: none;
+    color: azure;
+    size: 55px;
+    font-size: large;
+   
 }
