@@ -20,17 +20,10 @@ height: 150px;
 
 .userSection { 
 grid-area: main;
-/* height: 300px;
-width: 300px;  */
 }
 .computerSection { 
 grid-area: right;
-/* height: 350px;
-width: 400px;  */
-/* display: flex; */
-  /* justify-content: center;
-  align-items: center;
-  text-align: center; */
+
  }
 .userScore { 
 grid-area: userScore; 
@@ -41,12 +34,16 @@ grid-area: buttons;
 .computerScore{
  grid-area: ComputerScore;
 }
+.results{
+    grid-area: results;
+}
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header header header header'
     ' main main main right right right'
+    'results results results results results results'
     'userScore userScore userScore ComputerScore ComputerScore ComputerScore'
     'buttons buttons buttons buttons buttons buttons';
   gap: 10px;
@@ -90,4 +87,7 @@ width: 350px;
     size: 55px;
     font-size: large;
    
+}
+#battle-results{
+    visibility: hidden;
 }
