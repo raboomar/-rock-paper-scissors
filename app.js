@@ -5,6 +5,7 @@ const userImg = document.querySelector(".userSelection");
 const computerImg = document.querySelector(".computerSeletion");
 const userScore = document.getElementById("user-score");
 const computerSore = document.getElementById("computer-score");
+const battleResults = document.getElementById("battle-results");
 const btn = [rock, paper, scissors];
 
 btn.forEach((element) => {
@@ -25,18 +26,34 @@ const computerSelection = (userWeapon) => {
 const score = (user, computer) => {
   let userNum = parseInt(userScore.innerHTML);
   let computerNum = parseInt(computerSore.innerHTML);
-  if (user === computer) console.log("tie");
-  else if (user === "Rock" && computer === "Scissors") {
+  if (user === computer) {
+    results(user, computer, true, false);
+  } else if (user === "Rock" && computer === "Scissors") {
     userNum++;
     userScore.innerHTML = userNum;
+    results(user, computer, false, true);
   } else if (user === "Scissors" && computer === "Paper") {
     userNum++;
     userScore.innerHTML = userNum;
+    results(user, computer, false, true);
   } else if (user === "Paper" && computer === "Rock") {
     userNum++;
     userScore.innerHTML = userNum;
+    results(user, computer, false, true);
   } else {
     computerNum++;
     computerSore.innerHTML = computerNum;
+    results(user, computer, false, false);
+  }
+};
+
+const results = (user, computer, tie, userWon) => {
+  battleResults.style.visibility = "visible";
+  if (tie) {
+    battleResults.innerHTML = "It's a tie";
+  } else if (userWon) {
+    battleResults.innerHTML = ` You Won! \n ${user} beats ${computer}`;
+  } else {
+    battleResults.innerHTML = ` You Lost! \n  ${computer} beats ${user} `;
   }
 };
