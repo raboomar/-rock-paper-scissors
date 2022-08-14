@@ -11,7 +11,7 @@ const btn = [rock, paper, scissors];
 
 btn.forEach((element) => {
   element.addEventListener("click", () => {
-    let userWeapon = element.innerHTML;
+    let userWeapon = element.innerHTML.toLowerCase();
     userImg.src = `./images/${userWeapon}.jpeg`;
     computerSelection(userWeapon);
   });
@@ -22,7 +22,7 @@ reset.addEventListener("click", () => {
 
 const computerSelection = (userWeapon) => {
   let randomNum = Math.floor(Math.random() * btn.length);
-  let computerWeapon = btn[randomNum].innerHTML;
+  let computerWeapon = btn[randomNum].innerHTML.toLowerCase();
   computerImg.src = `./images/${computerWeapon}.jpeg`;
   score(userWeapon, computerWeapon);
 };
