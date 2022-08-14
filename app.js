@@ -32,15 +32,15 @@ const score = (user, computer) => {
   let computerNum = parseInt(computerSore.innerHTML);
   if (user === computer) {
     results(user, computer, true, false);
-  } else if (user === "Rock" && computer === "Scissors") {
+  } else if (user === "rock" && computer === "scissors") {
     userNum++;
     userScore.innerHTML = userNum;
     results(user, computer, false, true);
-  } else if (user === "Scissors" && computer === "Paper") {
+  } else if (user === "scissors" && computer === "paper") {
     userNum++;
     userScore.innerHTML = userNum;
     results(user, computer, false, true);
-  } else if (user === "Paper" && computer === "Rock") {
+  } else if (user === "paper" && computer === "rock") {
     userNum++;
     userScore.innerHTML = userNum;
     results(user, computer, false, true);
